@@ -1,2 +1,2 @@
 # What2watch-Movie-Search-and-Recommendation-System
-[Jiazheng Li (jl46)](https://github.com/uuvkk), [Keren Wang(wkeren2)](URL) and [Yunwen Zhu (yunwenz2)](URL)
+[Jiazheng Li](https://github.com/uuvkk) (jl46), [Keren Wang](URL) (wkeren2) and [Yunwen Zhu](URL) (yunwenz2)
