@@ -22,3 +22,17 @@ def dat_creator(iter_data, path):
         f.write('\n')
     f.close()
 ```
+### Searcher
+After generating MeTApy-readable dat files, we also create the line.toml because each line in the dat file is regarded as a corpus, and include the files in config.toml file, which will be loaded in the searcher. We use unigram modekl and the default filter chain.
+```
+prefix = '.'
+stop-words = "stopwords.txt"
+dataset = "movies_titles"
+corpus = "line.toml"
+index = "titles-idx"
+
+[[analyzers]]
+method = "ngram-word"
+ngram = 1
+filter = "default-unigram-chain"
+```
