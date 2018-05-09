@@ -5,3 +5,11 @@ Open source data from Kaggle, you can download the dataset [here](https://www.ka
 ## Main Classes and Functions
 ### Dat File Creator
 To use MeTApy library, we must use MeTA-readable file: dat file. We write our own creators to create dat file from our dataset. We also create metadata file for further searching purposes.
+```python
+def dat_creator(iter_data, path):
+    f = open(path, 'w')
+    for item in iter_data:
+        f.write(str(item))
+        f.write('\n')
+    f.close()
+```
