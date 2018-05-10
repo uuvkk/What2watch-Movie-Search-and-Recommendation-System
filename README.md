@@ -51,6 +51,8 @@ filter = "default-unigram-chain"
 ```
 #### Simple Search
 In the search part, we only use the titles of the movies as the corpus. So each title is regarded as a document in the model. We use BM25 ranker in MeTA using default parameters, to rank the search result. In the simple search, we only consider the score given by the ranker, i.e. the more similar the title of a movie to the query, the higher rank it has. However, sometimes the ranker just give us some movies that are not popular at all, and we do not even know where to watch this movies.
+
 #### IMDB Ranking
+To solve the problem of retrieving unknown movies. We introduce the IMDB ranking function, to measure the rate of movie. We will filter the movies with very small numbers of votes because they are so unknown that only a few of people have watched them. We use some code from the [project](https://www.kaggle.com/rounakbanik/movie-recommender-systems) finished by [Rounak Banik](https://www.kaggle.com/rounakbanik) as a reference in our project
 #### Rank by Relevance
 #### Rank by Rates
