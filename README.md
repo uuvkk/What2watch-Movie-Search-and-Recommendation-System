@@ -65,5 +65,7 @@ Now, we have two metrics to measure a movie retrieving result: BM25 ranking scor
 where *score* is the ranking score calculated by MeTA rankers, and *wr* is the IMDB weighted rate explained in the previous part, and *β* is a parameter to adjust the tradeoff between the two metrics.
 
 #### Rank by Relevance
+If you think the relevance of result to your query is more important, use the "rank by relevance" searcher, where the *β* parameter is set as 0.5, which means the importance of searching score is twice as the importance of IMDB weighted rate. And this searcher would give you the ranking emphasizing more on relevance.
 
 #### Rank by Rates
+If you think the popularity and overall rate of a movie is more important, use the "rank by rates" searcher, where the *β* parameter is set as 2, which means the importance of IMDB weighted rate is twice as the importance of searching score. And this searcher would give you the ranking emphasizing more on overall rate.
