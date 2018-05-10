@@ -13,12 +13,25 @@ PyQt5 for creating GUI for users
 
 ## Main Classes and Functions
 ### Dat File Creator
-To use MeTApy library, we must use MeTA-readable file: dat file. We write our own creators to create dat file from our dataset. We also create metadata file for further searching purposes.
+To use MeTApy library, we must use MeTA-readable file: dat file. We write our own creator to create dat file from our dataset. The file would be as the documents to creat index and conduct further searching by MeTA. 
 ```python
 def dat_creator(iter_data, path):
     f = open(path, 'w')
     for item in iter_data:
         f.write(str(item))
+        f.write('\n')
+    f.close()
+```
+We also create metadata file for further searching purposes, more information about the corpus could be stored in the metadata file. After getting search results from MeTA rankers, we would be able to extract more information from the metadata file.
+```python
+def metadata_creator(iter_data_columns, path):
+    f = open(path, 'w')
+    for row_num in range(len(iter_data_columns[0])):
+        row = ''
+        for column in iter_data_columns:
+            row += str(column[row_num])
+            row += '\t'
+        f.write(row)
         f.write('\n')
     f.close()
 ```
