@@ -49,3 +49,5 @@ method = "ngram-word"
 ngram = 1
 filter = "default-unigram-chain"
 ```
+#### Rank by Relevance
+#### Rank by Rates
