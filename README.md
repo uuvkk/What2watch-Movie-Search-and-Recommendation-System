@@ -57,10 +57,13 @@ To solve the problem of retrieving unknown movies. We introduce the IMDB ranking
 <div><img src="images/imdb_ranking.jpeg" height="200"/></div>
 The parameter settings are used for finding the top 250 movies. In our project, we want to filter more than 30,000 movies and leave those worth watching. We set the threshold as 50: the movies with at least 50 votes are left for further searching and recommendation. And we would have about 25% of the 45,000 movies left. We then add the weighted rates calculated to each row of movies for further ranking with the scores given by the MeTA rankers.
 
-#### Rank by Relevance
+#### F-measure Based Comprehensive Score for Search Results
 Now, we have two metrics to measure a movie retrieving result: BM25 ranking score and the IMDB weighted rate. We want to create a comprehensive measure for searching results. Here we introduce the concept of F-measure used in evaluating searching rankers, combing the two ranking metrics.
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=cs&space;(ComprehensiveScore)&space;=&space;\frac{(1&space;&plus;&space;\beta&space;^{2})&space;\times&space;(score&space;\times&space;wr)}{\beta&space;^{2}&space;\times&space;score&space;&plus;&space;wr&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?cs&space;(ComprehensiveScore)&space;=&space;\frac{(1&space;&plus;&space;\beta&space;^{2})&space;\times&space;(score&space;\times&space;wr)}{\beta&space;^{2}&space;\times&space;score&space;&plus;&space;wr&space;}" title="cs (ComprehensiveScore) = \frac{(1 + \beta ^{2}) \times (score \times wr)}{\beta ^{2} \times score + wr }" /></a>
-where *score* is the ranking score calculated by MeTA rankers, and *wr* is the IMDB weighted rate explained in the previous part. *β* is a parameter to adjust the tradeoff between the two metrics.
+
+where *score* is the ranking score calculated by MeTA rankers, and *wr* is the IMDB weighted rate explained in the previous part, and *β* is a parameter to adjust the tradeoff between the two metrics.
+
+#### Rank by Relevance
 
 #### Rank by Rates
