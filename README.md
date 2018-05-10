@@ -54,7 +54,7 @@ In the search part, we only use the titles of the movies as the corpus. So each 
 
 #### IMDB Ranking
 To solve the problem of retrieving unknown movies. We introduce the IMDB ranking function, to measure the rate of movie. We will filter the movies with very small numbers of votes because they are so unknown that only a few of people have watched them. We use some code from the [project](https://www.kaggle.com/rounakbanik/movie-recommender-systems) finished by [Rounak Banik](https://www.kaggle.com/rounakbanik) as a reference in our project, including the parts of extracting the genres of movies and calculating the IMDB score for a movie. The definition of [IMDB ranking](https://en.wikipedia.org/wiki/IMDb#Rankings) is as following:
-<div><img src="images/figure_6.png" height="400"/></div>
+<div><img src="images/imdb_ranking.jpeg" height="400"/></div>
 
 #### Rank by Relevance
 #### Rank by Rates
