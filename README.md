@@ -36,7 +36,7 @@ def metadata_creator(iter_data_columns, path):
     f.close()
 ```
 ### Searcher
-After generating MeTApy-readable dat files, we also create the line.toml because each line in the dat file is regarded as a corpus, and include the files in config.toml file, which will be loaded in the searcher. We use unigram modekl and the default filter chain.
+After generating MeTApy-readable dat files, we also create the line.toml because each line in the dat file is regarded as a corpus, and include the files in config.toml file, which will be loaded in the searcher. We use unigram model and the default filter chain.
 ```
 prefix = '.'
 stop-words = "stopwords.txt"
