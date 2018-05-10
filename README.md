@@ -55,6 +55,7 @@ In the search part, we only use the titles of the movies as the corpus. So each 
 #### IMDB Ranking
 To solve the problem of retrieving unknown movies. We introduce the IMDB ranking function, to measure the rate of movie. We will filter the movies with very small numbers of votes because they are so unknown that only a few of people have watched them. We use some code from the [project](https://www.kaggle.com/rounakbanik/movie-recommender-systems) finished by [Rounak Banik](https://www.kaggle.com/rounakbanik) as a reference in our project, including the parts of extracting the genres of movies and calculating the IMDB score for a movie. The definition of [IMDB ranking](https://en.wikipedia.org/wiki/IMDb#Rankings) is as following:
 <div><img src="images/imdb_ranking.jpeg" height="200"/></div>
+The parameter settings are used for finding the top 250 movies. In our project, we want to filter more than 30,000 movies and leave those worth watching. We set the threshold as 50: the movies with at least 50 votes are left for further searching and recommendation. And we would have about 25% of the 45,000 movies left. We then add the weighted rates calculated to each row of movies for further ranking with the scores given by the MeTA rankers.
 
 #### Rank by Relevance
 #### Rank by Rates
