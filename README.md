@@ -59,6 +59,8 @@ The parameter settings are used for finding the top 250 movies. In our project, 
 
 #### Rank by Relevance
 Now, we have two metrics to measure a movie retrieving result: BM25 ranking score and the IMDB weighted rate. We want to create a comprehensive measure for searching results. Here we introduce the concept of F-measure used in evaluating searching rankers, combing the two ranking metrics.
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=cs&space;(ComprehensiveScore)&space;=&space;\frac{(1&space;&plus;&space;\beta&space;^{2})&space;\times&space;(score&space;\times&space;wr)}{\beta&space;^{2}&space;\times&space;score&space;&plus;&space;wr&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?cs&space;(ComprehensiveScore)&space;=&space;\frac{(1&space;&plus;&space;\beta&space;^{2})&space;\times&space;(score&space;\times&space;wr)}{\beta&space;^{2}&space;\times&space;score&space;&plus;&space;wr&space;}" title="cs (ComprehensiveScore) = \frac{(1 + \beta ^{2}) \times (score \times wr)}{\beta ^{2} \times score + wr }" /></a>
+where *score* is the ranking score calculated by MeTA rankers, and *wr* is the IMDB weighted rate explained in the previous part. *β* is a parameter to adjust the tradeoff between the two metrics.
 
 #### Rank by Rates
