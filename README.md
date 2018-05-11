@@ -92,3 +92,6 @@ def files_creator(iter_names, iter_files, path):
         corpus_f.close()
     f.close()
 ```
+
+#### Content Based Recommendation
+In my recommender, I use the descriptions of movies to find similar movie to recommend. Actually, this is still a process of information retrieval, where I use the descriptions of the movies that a user like as the query.
