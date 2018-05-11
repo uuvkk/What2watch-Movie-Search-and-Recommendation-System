@@ -69,3 +69,6 @@ If you think the relevance of result to your query is more important, use the "r
 
 #### Rank by Rates
 If you think the popularity and overall rate of a movie is more important, use the "rank by rates" searcher, where the *β* parameter is set as 2, which means the importance of IMDB weighted rate is twice as the importance of searching score. And this searcher would give you the ranking emphasizing more on overall rate.
+
+### Recommender
+In my recommender part, instead of using lines in a file as corpus, I use files in a folder as corpus. This is because when processing some long documents, there may be some carriage returns in a corpus. Using lines as corpus may cause errors.
