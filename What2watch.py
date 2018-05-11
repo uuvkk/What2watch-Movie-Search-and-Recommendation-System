@@ -55,7 +55,7 @@ class What2watch:
         print("Welcome to use the recommender, the recommendation results will be based on movie description.\n")
         print("Loading files...\n")
         self.recommender.read_file('data/movies_metadata.csv')
-        metadata_creator([self.recommender.filtered_movies['id'].tolist(), self.recommender.filtered_movies['description'].tolist()],
+        metadata_creator([self.recommender.filtered_movies['id'].tolist(), self.recommender.filtered_movies['title'].tolist()],
                          'movies_descriptions/metadata.dat')
         files_creator(self.recommender.filtered_movies['id'].tolist(), self.recommender.filtered_movies['description'].tolist(),
                       'movies_descriptions/')
