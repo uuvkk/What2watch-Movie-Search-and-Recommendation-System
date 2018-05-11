@@ -77,3 +77,18 @@ type = "file-corpus"
 list = "descriptions"
 metadata = [{name = "id", type = "string"}, {name = "title", type = "string"}]
 ```
+#### Courpus File and Class List File Creator
+Initially I do not have the corpus files. I write my own file creator to extract the sigle files as corpus from a massive csv file. In this process, I also finish the class list file for MeTA to recognize classes for corpus.
+```python
+def files_creator(iter_names, iter_files, path):
+    f = open(path + 'descriptions-full-corpus.txt','w')
+    for row_num in range(len(iter_names)):
+        name_id = iter_names[row_num]
+        row = name_id + ' ' + name_id + '.txt'
+        f.write(row)
+        f.write('\n')
+        corpus_f = open(path + name_id + '.txt', 'w')
+        corpus_f.write(iter_files[row_num])
+        corpus_f.close()
+    f.close()
+```
