@@ -1,0 +1,10 @@
+prefix = '.'
+stop-words = "stopwords.txt"
+dataset = "movies_descriptions"
+corpus = "file.toml"
+index = "descriptions-idx"
+
+[[analyzers]]
+method = "ngram-word"
+ngram = 1
+filter = "default-unigram-chain"
