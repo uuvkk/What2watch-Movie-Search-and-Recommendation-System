@@ -11,8 +11,6 @@ MeTApy for searching and ranking, text mining
 
 Pandas for processing the data files
 
-PyQt5 for creating GUI for users
-
 ## Main Classes and Functions
 ### Dat File Creator
 To use MeTApy library, we must use MeTA-readable file: dat file. I write my own creator to create dat file from the dataset. The file would be as the documents to creat index and conduct further searching by MeTA. 
