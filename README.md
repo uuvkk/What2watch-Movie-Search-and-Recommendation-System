@@ -94,4 +94,8 @@ def files_creator(iter_names, iter_files, path):
 ```
 
 #### Content Based Recommendation
-In my recommender, I use the descriptions of movies to find similar movie to recommend. Actually, this is still a process of information retrieval, where I use the descriptions of the movies that a user like as the query.
+In my recommender, I use the descriptions of movies to find similar movie to recommend. Actually, this is still a process of information retrieval, where I use the descriptions of the movies that a user likes as the query. From the searching part, a user can get the ids of movies that he likes from search results. In the recommendation part, the system could get the descriptions of the movies to compose a query given to the recommender. And the recommender could use the generated inverted index by MeTA to find similar movies based on descriptions. The ranker used here is still BM25 with default parameters.
+
+From the specific dataset used in this project, I use the combination of the overview and tagline of a movie as its description. For those movies without any overview nor tagline from the dataset, I simply use its title as its decription.
+
+#### Comprehensive Recommendation Ranking
