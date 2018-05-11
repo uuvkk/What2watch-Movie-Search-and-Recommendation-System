@@ -99,3 +99,4 @@ In my recommender, I use the descriptions of movies to find similar movie to rec
 From the specific dataset used in this project, I use the combination of the overview and tagline of a movie as its description. For those movies without any overview nor tagline from the dataset, I simply use its title as its decription.
 
 #### Comprehensive Recommendation Ranking
+To improve the ranking of recommendation results, I also introduce the F-measure discussed in the previous parts. The *β* parameter is set as 1: relevance and rate are the same important. And when the query is very long, BM25 tend to give you higher ranking scores. At this time relevance would count more.
