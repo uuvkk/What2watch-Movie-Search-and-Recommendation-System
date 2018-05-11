@@ -71,4 +71,9 @@ If you think the relevance of result to your query is more important, use the "r
 If you think the popularity and overall rate of a movie is more important, use the "rank by rates" searcher, where the *β* parameter is set as 2, which means the importance of IMDB weighted rate is twice as the importance of searching score. And this searcher would give you the ranking emphasizing more on overall rate.
 
 ### Recommender
-In my recommender part, instead of using lines in a file as corpus, I use files in a folder as corpus. This is because when processing some long documents, there may be some carriage returns in a corpus. Using lines as corpus may cause errors.
+In my recommender part, instead of using lines in a file as corpus, I use files in a folder as corpus. This is because when processing some long documents, there may be some carriage returns in a corpus. Using lines as corpus may cause errors. In setting the file.toml file, I use the ids of movies as their classes. So the ranker will directly give me the ids of retrieved movies without needing metadata file. However I still put the ids and titles information in metadata file for convenience. The setting of file.toml is as followings.
+```
+type = "file-corpus"
+list = "descriptions"
+metadata = [{name = "id", type = "string"}, {name = "title", type = "string"}]
+```
