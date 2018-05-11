@@ -1,10 +1,6 @@
 # What2watch-Movie-Search-and-Recommendation-System
 [Jiazheng Li](https://github.com/uuvkk) (jl46), School of Information Sciences, University of Illinois Urbana-Champaign
 
-[Keren Wang](URL) (wkeren2)
-
-[Yunwen Zhu](URL) (yunwenz2)
-
 > To execute, download the [data files](https://www.kaggle.com/rounakbanik/the-movies-dataset) into "data" folder, and then run run_me.py.
 
 ## Dataset
