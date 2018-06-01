@@ -7,6 +7,8 @@ Yunwen Zhu (yunwenz2), College of Liberal Arts & Science, University of Illinois
 
 > To execute, download the [data files](https://www.kaggle.com/rounakbanik/the-movies-dataset) into "data" folder, and then run run_me.py.
 
+> This is a [link to the web application](https://github.com/rijn/movie-recommendation/wiki/Documentation) part of this project.
+
 ## Dataset
 Open source data from Kaggle, you can download the dataset [here](https://www.kaggle.com/rounakbanik/the-movies-dataset). It contains information like title, year, description, producer and actors of more than 45,000 movies, and 26 million ratings from 270,000 users for the 45,000 movies. 
 
